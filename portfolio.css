@@ -1,0 +1,1324 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    color: #2D2E32;
+    background-color: #DDE0C2;
+}
+.header{
+    z-index: 1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #2B3A67;
+    animation-name: head;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+.logo{
+    margin-left: 1vw;
+    width: 20vw;
+}
+.logo > img{
+    width: 20vw;
+    animation-name: logo;
+    animation-duration: 3s;
+    animation-delay: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes logo{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.nav > a{
+    color: #E1E1E1;
+    text-decoration: none;
+    margin-left: 5vw;
+    font-size: larger;
+}
+
+@keyframes head{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.nav>a:hover{
+    color:  #FFD700;
+}
+
+
+/*Hamburger*/
+.hamburger-checkbox {
+    display: none; 
+}
+.hamburger-label {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
+    margin-right: 1vw;
+}
+
+.heading{
+    width: 30vw;
+    height: 15vw;
+    padding-top: 6vw;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+    color: #006A4E;
+}
+.heading > h1{
+    font-size: 3.5vw;
+    color: #8C1D40;
+}
+.heading > p{
+    font-size: 1.5vw;
+    margin-left: 5vw;
+    color: #5E6A71;
+}
+.imgP{
+    background-color: #E07A5F;
+    width: 100vw;
+    height: 30vw;
+    display: flex;
+    justify-content: space-around;
+
+    animation-name: home;
+    animation-duration: 5s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: 1;
+}
+@keyframes home{
+    from{
+        transform: translate(-100%);
+        opacity: 0;
+    }
+    to{
+        transform: translate(0);
+        opacity: 100;
+    }
+}
+.img>img{
+    height: 25vw;
+    width: 18vw;
+    margin-top: 2.5rem;
+    border-radius: 1rem;
+    box-shadow: 0px 0px 5px 5px #1E1E1E, 0px 0px 0px 10px white;
+}
+.para{
+    background-color: #C9D8C5;
+    padding: 1.5vw;
+    margin-left: 5vw;
+    font-size: 1.9vw;
+    margin-top: 5rem;
+    width: 35vw;
+    text-align: justify;
+    height: 18.5vw;
+    border-radius: 1rem;
+    color: #2D2E32;
+}
+
+#About{
+    padding-top: 4.5rem;
+}
+
+#About{
+    opacity: 0;
+    animation-name: about;
+    animation-duration: 5s;
+    animation-delay: 1s;
+    animation-timing-function:ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction:reverse;
+    animation-fill-mode: forwards;
+}
+@keyframes about{
+    from{
+        transform: translate(0);
+        opacity: 1;
+    }
+    to{
+        transform: translate(100%);
+        opacity: 0;
+    }
+}
+#About>h2{
+    color: #8C1D40; 
+    margin-left: 3rem;
+    font-size: 2.5rem;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1.5px;
+}
+
+.aboutMe{
+    z-index: -1;
+    margin-left: 5vw;
+    width: 50vw;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2,40vw);
+    justify-items: center;
+    align-items: center;
+    column-gap: 10vw;
+}
+
+.myImg2{
+    margin-top: 1rem;
+    height: 15vw;
+    width: 15vw;
+    margin-left: 10vw;
+}
+.myImg3{
+    border-radius: 1rem;
+    margin-top: 1rem;
+    height: 15vw;
+    width: 15vw;
+    margin-left: 10vw;
+}
+.aboutMe1,.aboutMe2{
+    z-index: 0;
+    font-size: 1.5rem;
+    overflow-y: auto;
+    height: 35vw;
+    border-radius: 0.5rem;
+    border: 0.5rem solid #006A4E;
+    background-color: #88BFBF;
+}
+.aboutMe1>p, .aboutMe2>p,.aboutMe1>ul,.aboutMe2>ul{
+    padding: 1.5rem;
+    color: #333333;
+}
+
+#Projects>h2,#Achievements>h2,#Contact>h2{
+    padding-top: 5vw;
+    margin-left: 1rem;
+    font-size: 2.5rem;
+    text-decoration-line: underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1.5px;
+    color: #8C1D40;
+}
+
+.project{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.box>img{
+    width: 20vw;
+    height: 10vw;
+}
+.box{
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+    height: 15vw;
+    background-color: #37474F;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+.box>p{
+    background-color:  #F9F9F9;
+    color: #37474F;
+    margin-top: 0.5rem;
+    border-radius: 0.3rem;
+}
+.box>a{
+    color: #1E1E1E;;
+    background-color: #C9B26C;
+    margin-top: 0.5vw;
+    border-radius: 0.2rem;
+    text-align: center;
+    text-decoration-line:none ;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.box>a:hover{
+    color: #F9F9F9;
+    background-color: #8C1D40;
+}
+
+.imgAch{
+    transition-property: all;
+    transition-duration: 1s;
+}
+.imgAch:hover{
+    transform: scale(1.5);
+}
+
+#Projects{
+    opacity: 0;
+    animation-delay: 3s;
+    animation-name: project;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes project{
+    from{
+        opacity: 0;
+        transform: rotateX(90deg);
+    }
+    to{
+        opacity: 1;
+        transform: rotateX(0);
+    }
+}
+#Achievements{
+    opacity: 0;
+    animation-delay: 5s;
+    animation-name:achiev;
+    animation-duration: 7s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes achiev{
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+#Contact .cont, #Contact>h2{
+    opacity: 0;
+    animation-delay: 5s;
+    animation-name:contact;
+    animation-duration: 8s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+@keyframes contact{
+    form{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.cont{
+    margin-left: 10vw;
+ }
+ .contForm{
+     border-radius: 0.5rem;
+     width: 30vw;
+     margin-top: 2vw;
+     font-size: 1.5rem;
+     background-color: #2A363B;
+     color: #F0E5D8;
+ }
+ textarea{
+     border-radius: 0.5rem;
+     position: relative;
+     top: 1vw;
+     width: 14vw;
+     height: 8vw;
+     margin-left: 8vw;
+     
+ }
+ label{
+     padding: 5vw 2vw;
+ }
+ input,select{
+     width: 10vw;
+     height: 1.6vw;
+     border-radius: 0.5rem;
+ }
+ legend{
+     margin-left: 0.8vw;
+     font-size: 1vw;
+     margin-bottom: 1vw;
+     text-decoration: dotted;
+     text-decoration-line:underline ;
+     text-decoration-thickness: 1px;
+ }
+ fieldset{
+     width: 25vw;
+     border: none;
+ }
+ span{
+     color: red;
+ }
+ button{
+     width: 4vw;
+     height: 2vw;
+     margin-top: 0.5vw;
+     margin-left: 12vw;
+     background-color: #2A9D8F;
+     color: #F0E5D8;
+     border: none;
+     border-radius: 0.5rem;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+ button:hover {
+     background-color: #264653;
+     color: #E9C46A;
+ }
+ 
+ .footer{
+     width: 100vw;
+     border: 0.5rem double #E76F51;
+     margin-top: 1rem;
+     color: #F0E5D8;
+     background-color: #264653;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     font-size: 1.2rem;
+     border-radius: 0.5rem;
+ }
+footer a{
+    color:#F4A261;
+    text-decoration-line: none;
+}
+.footer a:hover {
+    color: #2A9D8F;
+    text-decoration: underline;
+}
+
+@media(max-width:768px){
+    .nav {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 10.5vw;
+        right: 0vw;
+        width: 25vw;
+        background-color: #333333;
+        text-align: center;
+        transform: translateX(100%); 
+    }
+
+    .nav a {
+        margin-left: 0;
+        padding: 1vw;
+        font-size: 3vw;
+    }
+
+    .hamburger-label {
+        display: block;
+    }
+
+    .hamburger-checkbox:checked ~ .nav {
+        transform: translateX(0); 
+    }
+    .logo{
+        margin-left: 2vw;
+        width: 35vw;
+    }
+    .logo > img{
+        width: 35vw;
+    }
+    .heading{
+        height: 25vw;
+        width: 100vw;
+        padding-top: 10vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+    .heading > h1{
+        font-size: 6vw;
+    }
+    .heading > p{
+        font-size: 3vw;
+        margin-right: 52vw;
+    }
+    .imgP{
+        padding-top: 0vw;
+        width: 105vw;
+        height: 55vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .para{ 
+        margin-left: 2rem;
+        font-size: 2.5vw;
+        margin-top: 4.5rem;
+        width: 40vw;
+        text-align: justify;
+        height: 32vw;
+        border-radius: 5vw;
+    }
+    .para>p{
+        padding: 1.5vw;
+    }
+    .img>img{
+        margin-right: 8vw;
+        margin-top: 2.5vw;
+        height: 50vw;
+        width: 35vw;
+        border-radius: 1vw;
+    }
+
+    #About>h2,#Projects>h2,#Achievements>h2{
+        padding-top: 9vw;
+        margin-left: 1rem;
+        font-size: 2.5rem;
+        text-decoration-thickness: 1.5px;
+    }
+    #About>h2{
+        padding-top: 0vw;
+    }
+    .project{
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-evenly;
+    }
+    
+    
+    .box>img{
+        width: 20vw;
+        height: 10vw;
+    }
+    .box{
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        height: 20vw;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1rem;
+    }
+    .box>p{
+        margin-top: 0.5rem;
+        border-radius: 0.3rem;
+    }
+    .box>a{
+        margin-top: 0.5vw;
+        border-radius: 0.2rem;
+        text-align: center;
+        text-decoration-line:none ;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .cont{
+        margin-left: 25vw;
+     }
+    .contForm{
+        text-align: justify;
+        border-radius: 0.5rem;
+         width:40vw;
+         margin-top: 5vw;
+         font-size: 2.5vw;
+         background-color: #2A363B;
+         color: #F0E5D8;
+     }
+    textarea{
+         height: 20vw;
+         width: 30vw;
+         margin-left: 5vw;
+         
+     }
+    input,select{
+        border-radius: 1rem;
+        margin-left: 3vw;
+         width: 20vw;
+         height: 3vw;
+     }
+    legend{
+         margin-left: 1.5vw;
+         font-size: 1.5vw;
+         margin-bottom: 1vw;
+         text-decoration: dotted;
+         text-decoration-line:underline ;
+         text-decoration-thickness: 1px;
+     }
+    button{
+         width: 10vw;
+         height: 5vw;
+         margin-left: 15vw;
+         transition: background-color 0.3s ease;
+    }
+    #Contact>h2{
+        padding-top: 9.5vw;
+    }
+    .footer{
+        width: 105vw;
+        border: 0.3rem double #E76F51;
+        margin-top: 1rem;
+        font-size: 0.9rem;
+    }
+    .header{
+        height: 10vw;
+    }
+}
+
+
+@media(max-width:600px){
+    .logo{
+        margin-left: 2vw;
+        width: 50vw;
+    }
+    .logo > img{
+        width: 50vw;
+    }
+    .heading{
+        height: 40vw;
+        width: 100vw;
+        padding-top: 15vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+    .heading > h1{
+        font-size: 8vw;
+    }
+    .heading > p{
+        font-size: 3.5vw;
+        margin-right: 50vw;
+    }
+    .imgP{
+        width: 105vw;
+        height: 55vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .para{
+        margin-left: 2rem;
+        font-size: 2.5vw;
+        margin-top: 2.5rem;
+        width: 40vw;
+        text-align: justify;
+        height: 32vw;
+        border-radius: 5vw;
+    }
+    .para>p{
+        padding: 1.5vw;
+    }
+    .img>img{
+        margin-right: 8vw;
+        margin-top: 2.5vw;
+        height: 50vw;
+
+        width: 35vw;
+        border-radius: 1vw;
+    }
+
+    #About{
+        padding-top: 15vw;
+    }
+    #About>h2{ 
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    
+    
+    .aboutMe{
+       
+        width: 100vw;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        align-items: start;
+        justify-items: start;
+    }
+    .myImg2,.myImg3{
+        margin-top: 1rem;
+        height: 30vw;
+        width: 30vw;
+        margin-left: 3rem;
+    }
+    .aboutMe1,.aboutMe2{
+        margin-left: 2rem;
+        border:0.3rem solid #006A4E;
+        font-size: 4vw;
+        overflow-y: auto;
+        width: 90vw;
+        height: 50vh;
+    }
+    .aboutMe1>p, .aboutMe2>p,.aboutMe1>ul,.aboutMe2>ul{
+        padding: 1.5rem;
+    }
+    #Projects>h2{
+        margin-top: 2rem;
+        margin-left: 1rem;
+        font-size: 2.5rem;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1.5px;
+    }
+    
+    #Projects>h2,#Contact>h2{
+        padding-top: 15vw;
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    #Achievements>h2{
+        padding-top: 15vw;
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    .project{
+        margin-top: 4vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .box>img{
+        width: 35vw;
+        height: 20vw;
+    }
+    .box{
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 39vw;
+        height: 40vw;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+    }
+    .box>p{
+        background-color:  #F9F9F9;
+        font-size: 3vw;
+        margin-top: 0.5rem;
+        border-radius: 0.1rem;
+    }
+    .box>a{
+        font-size: 3vw;
+        margin-top: 0.5vw;
+        border-radius: 0.2rem;
+        text-align: center;
+        text-decoration-line:none ;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .cont{
+        margin-left: 25vw;
+     }
+    .contForm{
+        text-align: justify;
+        border-radius: 0.5rem;
+         width: 60vw;
+         margin-top: 5vw;
+         font-size: 3vw;
+         background-color: #2A363B;
+         color: #F0E5D8;
+     }
+    textarea{
+         height: 20vw;
+         width: 50vw;
+         margin-left: 5vw;
+         
+     }
+    input,select{
+        border-radius: 1rem;
+        margin-left: 3vw;
+         width: 40vw;
+         height: 5vw;
+     }
+    legend{
+         margin-left: 1.5vw;
+         font-size: 3vw;
+         margin-bottom: 1vw;
+         text-decoration: dotted;
+         text-decoration-line:underline ;
+         text-decoration-thickness: 1px;
+     }
+    fieldset{
+         width: 25vw;
+         border: none;
+     }
+    button{
+         width: 20vw;
+         height: 10vw;
+         margin-left: 20vw;
+         transition: background-color 0.3s ease;
+    }
+    #Contact>h2{
+        padding-top: 15vw;
+    }
+    .footer{
+        width: 105vw;
+        border: 0.3rem double #E76F51;
+        margin-top: 1rem;
+        font-size: 0.7rem;
+    }
+    .header{
+        height: 15vw;
+    }
+}
+
+
+@media(max-width:351px){
+
+    .hamburger-checkbox {
+        display: none; 
+    }
+    .hamburger-label {
+        display: none;
+        cursor: pointer;
+        font-size: 5vw;
+        color: white;
+    }
+
+    .nav {
+        position: absolute;
+        top: 3rem;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        transform: translateX(100%); 
+    }
+
+    .nav a {
+        margin-left: 0;
+        padding: 1vw;
+        font-size: 3vw;
+    }
+
+    .hamburger-label {
+        display: block;
+    }
+
+    .hamburger-checkbox:checked ~ .nav {
+        transform: translateX(0);
+    }
+
+
+    .logo{
+        margin-left: 2vw;
+        width: 50vw;
+    }
+    .logo > img{
+        width: 50vw;
+    }
+    .heading{
+        height: 40vw;
+        width: 100vw;
+        padding-top: 3rem;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+    .heading > h1{
+        font-size: 8vw;
+    }
+    .heading > p{
+        font-size: 3.5vw;
+        margin-right: 50vw;
+    }
+    .imgP{
+        width: 24rem;
+        height: 55vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .para{ 
+        margin-left: 3rem;
+        font-size: 2.5vw;
+        margin-top: 2.5rem;
+        width: 40vw;
+        text-align: justify;
+        height: 30.5vw;
+        border-radius: 5vw;
+    }
+    .para>p{
+        padding: 2vw;
+    }
+    .img>img{
+        margin-right: 10vw;
+        margin-top: 0.5rem;
+        height: 50vw;
+
+        width: 35vw;
+        border-radius: 1vw;
+    }
+
+    #About{
+        padding-top: 3rem;
+    }
+    #About>h2{ 
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    
+    
+    .aboutMe{
+        margin-left:0rem;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: 100vw;
+        grid-template-rows: 10rem 10rem;
+        row-gap: 10rem;
+        
+    }
+    .myImg2,.myImg3{
+        margin-top: 1rem;
+        height: 40vw;
+        width: 40vw;
+        margin-left: 3rem;
+    }
+    .aboutMe1,.aboutMe2{
+        
+        font-size: 4vw;
+        overflow-y: auto;
+    }
+    .aboutMe1>p, .aboutMe2>p,.aboutMe1>ul,.aboutMe2>ul{
+        padding: 1.5rem;
+    }
+    
+    #Projects>h2,#Contact>h2{
+        padding-top: 40vw;
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    #Achievements>h2{
+        padding-top: 15vw;
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    .project{
+        margin-top: 4vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .box>img{
+        width: 25vw;
+        height: 20vw;
+    }
+    .box{
+        margin-left: 3rem;
+        display: flex;
+        flex-direction: column;
+        width: 30vw;
+        height: 40vw;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+    }
+    .box>p{
+        font-size: 2.5vw;
+        margin-top: 0.5rem;
+        border-radius: 0.3rem;
+    }
+    .box>a{
+        font-size: 2.6vw;
+        margin-top: 0.5vw;
+        border-radius: 0.2rem;
+        text-align: center;
+        text-decoration-line:none ;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .cont{
+        margin-left: 30vw;
+     }
+    .contForm{
+        text-align: justify;
+        border-radius: 0.5rem;
+         width: 60vw;
+         margin-top: 2vw;
+         font-size: 4vw;
+         background-color: #2A363B;
+         color: #F0E5D8;
+     }
+    textarea{
+         height: 20vw;
+         width: 50vw;
+         margin-left: 5vw;
+         
+     }
+    input,select{
+        border-radius: 1rem;
+        margin-left: 3vw;
+         width: 50vw;
+         height: 7vw;
+     }
+    legend{
+         margin-left: 1.5vw;
+         font-size: 3vw;
+         margin-bottom: 1vw;
+         text-decoration: dotted;
+         text-decoration-line:underline ;
+         text-decoration-thickness: 1px;
+     }
+    fieldset{
+         width: 25vw;
+         border: none;
+     }
+    button{
+         width: 20vw;
+         height: 10vw;
+         margin-left: 20vw;
+         transition: background-color 0.3s ease;
+    }
+    #Contact>h2{
+        padding-top: 15vw;
+    }
+    .footer{
+        width: 24rem;
+        border: 0.3rem double #E76F51;
+        margin-top: 1rem;
+        font-size: 0.7rem;
+    }
+}
+
+@media(max-width:360px) and (min-width:352px){
+    .aboutMe{
+        margin-left: -0.4rem;
+    }
+    
+    .aboutMe1,.aboutMe2{
+        border: 0.3rem solid #006A4E;
+    }
+    #Projects>h2,#Contact>h2{
+        padding-top: 13vw;
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    #Achievements>h2{
+        padding-top: 15vw;
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    .project{
+        margin-top: 10vw;
+        display: flex;
+        column-gap: 2rem;
+    }
+    
+    .box>img{
+        width: 30vw;
+        height: 25vw;
+    }
+    .box{
+        margin-left: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        width: 32vw;
+        height: 40vw;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+    }
+    .box>p{
+        font-size: 2.5vw;
+        margin-top: 0.5rem;
+        border-radius: 0.3rem;
+    }
+    .box>a{
+        font-size: 2.6vw;
+        margin-top: 0.5vw;
+        border-radius: 0.2rem;
+        text-align: center;
+        text-decoration-line:none ;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .cont{
+        margin-left: 25vw;
+     }
+    .contForm{
+        text-align: justify;
+        border-radius: 0.5rem;
+         width: 60vw;
+         margin-top: 5vw;
+         font-size: 3vw;
+         background-color: #2A363B;
+         color: #F0E5D8;
+     }
+    textarea{
+         height: 20vw;
+         width: 50vw;
+         margin-left: 5vw;
+         
+     }
+    input,select{
+        border-radius: 1rem;
+        margin-left: 3vw;
+         width: 40vw;
+         height: 5vw;
+     }
+    legend{
+         margin-left: 1.5vw;
+         font-size: 3vw;
+         margin-bottom: 1vw;
+         text-decoration: dotted;
+         text-decoration-line:underline ;
+         text-decoration-thickness: 1px;
+     }
+    fieldset{
+         width: 25vw;
+         border: none;
+     }
+    button{
+         width: 20vw;
+         height: 10vw;
+         margin-left: 20vw;
+         transition: background-color 0.3s ease;
+    }
+    #Contact>h2{
+        padding-top: 15vw;
+    }
+    .footer{
+        width: 23.5rem;
+        border: 0.3rem double #E76F51;
+        margin-top: 1rem;
+        font-size: 0.7rem;
+    }
+
+    .header{
+        height: 15vw;
+    }
+    #Projects>h2{
+        padding-top: 15vw;
+    }
+}
+
+
+@media(max-width:240px){
+    .logo{
+        margin-left: 2vw;
+        width: 50vw;
+    }
+    .logo > img{
+        width: 50vw;
+    }
+    .heading{
+        height: 40vw;
+        width: 100vw;
+        padding-top: 15vw;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5vw;
+    }
+    .heading > h1{
+        font-size: 8vw;
+    }
+    .heading > p{
+        font-size: 3.5vw;
+        margin-right: 50vw;
+    }
+    .imgP{
+        width: 105vw;
+        height: 55vw;
+        display: flex;
+        justify-content: space-between;
+    }
+    .para{
+        margin-left: 2rem;
+        font-size: 2.5vw;
+        margin-top: 2.5rem;
+        width: 40vw;
+        text-align: justify;
+        height: 32vw;
+        border-radius: 5vw;
+    }
+    .para>p{
+        padding: 1.5vw;
+    }
+    .img>img{
+        margin-right: 8vw;
+        margin-top: 2.5vw;
+        height: 50vw;
+
+        width: 35vw;
+        border-radius: 1vw;
+    }
+
+    #About{
+        padding-top: 15vw;
+    }
+    #About>h2{ 
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    
+    
+    .aboutMe{
+       
+        width: 100vw;
+        padding-top: 1rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        align-items: start;
+        justify-items: start;
+    }
+    .myImg2,.myImg3{
+        margin-top: 1rem;
+        height: 10vw;
+        width: 10vw;
+        margin-left: 3rem;
+    }
+    .aboutMe1,.aboutMe2{
+        margin-left: 2rem;
+        border:0.3rem solid #006A4E;
+        font-size: 4vw;
+        overflow-y: auto;
+        width: 90vw;
+        height: 50vh;
+    }
+    .aboutMe1>p, .aboutMe2>p,.aboutMe1>ul,.aboutMe2>ul{
+        padding: 1.5rem;
+    }
+    #Projects>h2{
+        margin-top: 2rem;
+        margin-left: 1rem;
+        font-size: 2.5rem;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1.5px;
+    }
+    
+    #Projects>h2,#Contact>h2{
+        padding-top: 15vw;
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    #Achievements>h2{
+        padding-top: 15vw;
+        margin-left: 1rem;
+        font-size: 6vw;
+        text-decoration-line: underline;
+        text-decoration-style: dashed;
+        text-decoration-thickness: 1px;
+    }
+    .project{
+        margin-top: 4vw;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    .box>img{
+        width: 35vw;
+        height: 20vw;
+    }
+    .box{
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+        width: 39vw;
+        height: 40vw;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0.5rem;
+    }
+    .box>p{
+        background-color:  #F9F9F9;
+        font-size: 3vw;
+        margin-top: 0.5rem;
+        border-radius: 0.1rem;
+    }
+    .box>a{
+        font-size: 3vw;
+        margin-top: 0.5vw;
+        border-radius: 0.2rem;
+        text-align: center;
+        text-decoration-line:none ;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+    .cont{
+        margin-left: 25vw;
+     }
+    .contForm{
+        text-align: justify;
+        border-radius: 0.5rem;
+         width: 60vw;
+         margin-top: 5vw;
+         font-size: 3vw;
+         background-color: #2A363B;
+         color: #F0E5D8;
+     }
+    textarea{
+         height: 20vw;
+         width: 50vw;
+         margin-left: 5vw;
+         
+     }
+    input,select{
+        border-radius: 1rem;
+        margin-left: 3vw;
+         width: 40vw;
+         height: 5vw;
+     }
+    legend{
+         margin-left: 1.5vw;
+         font-size: 3vw;
+         margin-bottom: 1vw;
+         text-decoration: dotted;
+         text-decoration-line:underline ;
+         text-decoration-thickness: 1px;
+     }
+    fieldset{
+         width: 25vw;
+         border: none;
+     }
+    button{
+         width: 20vw;
+         height: 10vw;
+         margin-left: 20vw;
+         transition: background-color 0.3s ease;
+    }
+    #Contact>h2{
+        padding-top: 15vw;
+    }
+    .footer{
+        width: 105vw;
+        border: 0.3rem double #E76F51;
+        margin-top: 1rem;
+        font-size: 0.7rem;
+    }
+    .header{
+        height: 15vw;
+    }
+}
