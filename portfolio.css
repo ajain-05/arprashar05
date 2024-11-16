@@ -268,7 +268,7 @@ body{
 
 #Projects{
     opacity: 0;
-    animation-delay: 3s;
+    animation-delay: 5s;
     animation-name: project;
     animation-duration: 8s;
     animation-timing-function: ease-in-out;
@@ -286,7 +286,7 @@ body{
 }
 #Achievements{
     opacity: 0;
-    animation-delay: 5s;
+    animation-delay: 7s;
     animation-name:achiev;
     animation-duration: 7s;
     animation-timing-function: ease-in-out;
@@ -304,7 +304,7 @@ body{
 }
 #Contact .cont, #Contact>h2{
     opacity: 0;
-    animation-delay: 5s;
+    animation-delay: 8s;
     animation-name:contact;
     animation-duration: 8s;
     animation-timing-function: ease-in-out;
